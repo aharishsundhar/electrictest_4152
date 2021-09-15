@@ -1,0 +1,32 @@
+<h2 class="screen-align">Gpsearchitem</h2>
+<div id="template-ixcd" class="row">
+    <div id="template-ipyf" class="cell">
+        <div id="template-idjx" class="">
+            <ng-select id="template-i2b3" name="dynamicdropdown_template-i2b3" [searchable]="true"
+            [virtualScroll]="true" [items]="itemArray" bindLabel="" bindValue="" [(ngModel)]="itemtaglist.category"
+            [ngModelOptions]="{standalone: true}" class="form-control"></ng-select>
+        </div>
+        <button id="template-ibhfh" (click)="GpSearch()" class="button btn btn-primary">Send</button>
+    </div>
+    <div id="template-i0fe" class="cell">
+        <div id="template-i22n" class="">
+            <ng-select id="template-ifph" name="dynamicdropdown_template-ifph" [searchable]="true"
+            [virtualScroll]="true" [items]="itemArray" bindLabel="" bindValue="" [(ngModel)]="itemtaglist.farme"
+            [ngModelOptions]="{standalone: true}" class="form-control"></ng-select>
+        </div>
+    </div>
+    <div id="template-ihfg" class="cell">
+        <div id="template-iis6h" class="">
+            <ng-select id="template-i1i19" name="dynamicdropdown_template-i1i19" [searchable]="true"
+            [virtualScroll]="true" [items]="itemArray" bindLabel="" bindValue="" [(ngModel)]="itemtaglist.motor"
+            [ngModelOptions]="{standalone: true}" class="form-control"></ng-select>
+        </div>
+    </div>
+</div>
+<div name="grid_template-ifd53" id="template-ifd53" (click)="GpGetAllValues()">
+    <ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid"
+    class="ag-theme-balham" [columnDefs]="columnDefs" [pagination]="true" [paginationPageSize]="paginationPageSize"
+    [defaultColDef]="defaultColDef" [rowData]="rowData" [rowSelection]="rowSelection"
+    (gridReady)="onGridReady($event)" domLayout='autoHeight'></ag-grid-angular>
+</div>
+<div id="myGrid" class=""></div>

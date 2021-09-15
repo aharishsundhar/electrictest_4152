@@ -1,0 +1,23 @@
+<h2 class="screen-align">Catalog</h2>
+<div id="template-iwsw" class="row">
+    <div id="template-i2tj" class="cell">
+        <label id="template-i2zx" class="label">category</label>
+        <input id="template-i8xy" class="input form-control" />
+        <button id="template-ifan6" class="button btn btn-primary">Send</button>
+    </div>
+    <div id="template-i7ik" class="cell">
+        <label id="template-i4be" class="label">frame</label>
+        <input id="template-i67n" class="input form-control" />
+    </div>
+    <div id="template-i1qo" class="cell">
+        <label id="template-ixo9a" class="label">motor</label>
+        <input id="template-i07r" class="input form-control" />
+    </div>
+</div>
+<div name="grid_template-i9plf" id="template-i9plf" (click)="GpGetAllValues()">
+    <ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid"
+    class="ag-theme-balham" [columnDefs]="columnDefs" [pagination]="true" [paginationPageSize]="paginationPageSize"
+    [defaultColDef]="defaultColDef" [rowData]="rowData" [rowSelection]="rowSelection"
+    (gridReady)="onGridReady($event)" domLayout='autoHeight'></ag-grid-angular>
+</div>
+<div id="myGrid" class=""></div>

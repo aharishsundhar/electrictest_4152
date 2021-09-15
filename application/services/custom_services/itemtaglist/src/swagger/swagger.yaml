@@ -1,0 +1,93 @@
+---
+openapi: 3.0.0
+info:
+   version: 1.3.0
+   title: electrictest open api specification
+   description: itemtaglist API
+   termsOfService: http://api_url/terms/
+   contact:
+      name: ContactName
+      email: hello@wolox.co
+      url: https://www.wolox.com.ar/
+   license:
+      name: Apache 2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+   - url: http://localhost:8009
+     description: itemtaglist
+tags:
+- name: electricadd
+- name: itemtaglist
+paths:
+   "/electricadd":
+      get:
+         tags:
+         -  electricadd
+         description: GpGetAllValues
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+      post:
+         tags:
+         -  electricadd
+         description: GpCreate
+         requestBody:
+            content:
+               application/json:
+                  schema:
+                     $ref: "#/components/schemas/electricadd"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+   "/electricadd/get/search":
+      get:
+         tags:
+         -  electricadd
+         description: GpSearch
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+components:
+   schemas:
+      electricadd:
+         type: object
+         properties:
+            category:
+               type: "string"
+               description: Description
+            farme:
+               type: "string"
+               description: Description
+            motor:
+               type: "string"
+               description: Description
+      itemtaglist:
+         type: object
+         properties:
+            category:
+               type: "string"
+               description: Description
+            farme:
+               type: "string"
+               description: Description
+            motor:
+               type: "string"
+               description: Description
